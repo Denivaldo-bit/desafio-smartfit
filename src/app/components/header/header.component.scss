@@ -38,7 +38,7 @@ header .text-container p {
     color: var(--light-grey);
 }
 
-header .text-container .heading {
+header .heading {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -48,7 +48,7 @@ header .text-container .heading {
     gap: 14px;
 }
 
-header .text-container .heading-border {
+header .heading-border {
     height: 12px;
     width: 40px;
     background-color: var(--dark-grey);
