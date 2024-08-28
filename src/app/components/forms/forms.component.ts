@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from '../header/header.component';
 import { CommonModule } from '@angular/common';
+import { GetUnitsService } from '../../services/get-units.services';
 
 @Component({
   selector: 'app-forms',
@@ -18,10 +19,11 @@ export class FormsComponent implements OnInit {
   formGroup!: FormGroup;
 
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private unitService: GetUnitsService) {}
 
 
   ngOnInit(): void {
+    this.unitService.getAllUnits().subscribe(data=> console.log(data));
     this.formGroup = this.formBuilder.group ({
       hour: '',
       showClosed: false
